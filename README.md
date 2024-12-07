@@ -1,7 +1,7 @@
 # Learning_Node
 
 ### How to add changes to your remote repo?
-<img src="images/How to add changes to remote repo.png" alt="My Image" width="300" height="300">
+<img src="images/How to add changes to remote repo.png" alt="My Image" width="500" height="300">
 ![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png)
 
 
