@@ -1,5 +1,9 @@
 # Learning_Node
 
+### How to add changes to your remote repo?
+![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png)
+
+
 A module in Node.js is like a small, self-contained package of code that can be used to perform specific tasks. You can think of it as a building block for your application.
 For example:
 If you need to handle files, there's a fs module (File System).
@@ -31,11 +35,9 @@ Supported natively in modern browsers and Node.js (starting from version 12 with
 Example:
 ### math.js:
 javascript
-Copy code
 export const add = (a, b) => a + b; // Export the `add` function
 
 ### app.js:
 javascript
-Copy code
 import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
