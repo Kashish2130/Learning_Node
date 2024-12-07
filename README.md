@@ -19,12 +19,10 @@ Files are treated as modules, and you use the require function to import them.
 You export functionality using module.exports or exports.
 Example:
 ### math.js:
-javascript
 const add = (a, b) => a + b;
 module.exports = { add }; // Export the `add` function
 
 ### app.js:
-javascript
 const math = require('./math'); // Import the `math` module
 console.log(math.add(2, 3)); // Output: 5
 
@@ -34,10 +32,8 @@ It uses the import and export keywords.
 Supported natively in modern browsers and Node.js (starting from version 12 with the .mjs extension or "type": "module" in package.json).
 Example:
 ### math.js:
-javascript
 export const add = (a, b) => a + b; // Export the `add` function
 
 ### app.js:
-javascript
 import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
