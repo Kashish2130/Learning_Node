@@ -73,7 +73,7 @@ Now here there can be multiple ways of writing this :
 
   ## Dependencies
 
-  ### Note : Now dependencies contains all the packages that are installed from the internet and all the dependencies related to that package is there in the node modules so if we delete the node modules the project would be safe but it wont run since the dependencies that package requires to run is in the node modules.
+  #### Note : Now dependencies contains all the packages that are installed from the internet and all the dependencies related to that package is there in the node modules so if we delete the node modules the project would be safe but it wont run since the dependencies that package requires to run is in the node modules.
 
   
   Node pe jab ham normal javascript chalate hai to wo chalke bandh ho jati hai but jam ham server se chaleyenge wo kabhi bandh nai hoga wo chlate rahega so 
