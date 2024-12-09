@@ -38,5 +38,20 @@ export const add = (a, b) => a + b; // Export the `add` function
 import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
 
-### understanding dependencies
-![alt text](image.png)
+## understanding dependencies
+![dependencies]('images/dependencies.png')
+
+### Things to know about the dependencies and package.json file!
+To check outdated dependencies/packages?
+## npm outdated
+For example, when you import project from somewhere else you have to check its versions, it has to be updated so that your code works well
+So to check that you run above command and update if any necessary changes are required.
+
+So check line  "express" : "4.18.0" in above picture
+4 : major version
+18 : minor version
+0 : patch (which generally represent the fix of bugs which does not make any remarkable change if it is changed)
+Now here there can be multiple ways of writing this :
+### "^4.18.0" - allows updates of minor versions (means 18 to 19 or 20) on npm 'update command'
+### "*4.18.0" - it allows all the updates even to the major versions
+### "~4.18.0" - this only allows updates of the last digit which is '0' more strict version 
