@@ -39,7 +39,7 @@ import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
 
 ## Understanding Dependencies
-<img src="images/dependencies.png" alt="My Image" width="200" height="200">
+<img src="images/dependencies.png" alt="My Image" width="400" height="200">
 ![dependencies]('images/dependencies.png')
 
 ## Things to know about the dependencies and package.json file!
