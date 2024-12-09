@@ -39,7 +39,7 @@ import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
 
 ## Understanding Dependencies
-<img src="images/dependencies.png" alt="My Image" width="100" height="100">
+<img src="images/dependencies.png" alt="My Image" width="200" height="200">
 ![dependencies]('images/dependencies.png')
 
 ## Things to know about the dependencies and package.json file!
@@ -84,14 +84,14 @@ Now here there can be multiple ways of writing this :
   Dev-Dependency :
   This is required only for development enviorement but not to code.
   This is not installed globally on your system like node and npm and so you cannot directly run it as :
-  nodemon index.js
+  "nodemon index.js"
 
   you can make a script such as:
   "start" : "nodemon index.js",
   and then run :
-  npm start to start the server through nodemon.
+  "npm start" to start the server through nodemon.
 
   To close the server :
-  ### ctrl^c
+  #### ctrl^c
 
 
