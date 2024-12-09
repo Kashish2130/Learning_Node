@@ -2,8 +2,7 @@
 
 ### How to add changes to your remote repo?
 <img src="images/How to add changes to remote repo.png" alt="My Image" width="500" height="300">
-![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png)
-
+<!-- ![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png) -->
 
 A module in Node.js is like a small, self-contained package of code that can be used to perform specific tasks. You can think of it as a building block for your application.
 For example:
@@ -38,3 +37,6 @@ export const add = (a, b) => a + b; // Export the `add` function
 ### app.js:
 import { add } from './math.js'; // Import the `add` function
 console.log(add(2, 3)); // Output: 5
+
+### understanding dependencies
+![alt text](image.png)

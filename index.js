@@ -1,5 +1,11 @@
 //const lib = require('./lib.js') //commonjs syntax
 import {sum,diff} from './lib.js';
+import express from 'express';
+
+console.log('hello world')
+
+const server = express();
+server.listen(8080);
 // =========================================================================================================================
 // UNDERSTANDING THE BASICS
 
