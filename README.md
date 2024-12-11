@@ -94,4 +94,9 @@ Now here there can be multiple ways of writing this :
   To close the server :
   #### ctrl^c
 
+  Backend's one function is to do static hosting
+  next is to fetch apis
+  
+
+
 

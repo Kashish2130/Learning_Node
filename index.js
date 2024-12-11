@@ -1,11 +1,56 @@
+const http = require('http');
+const fs = require('fs'); 
+
+const index = fs.readFileSync('index.html','utf-8');
+const data = fs.readFileSync('data.json','utf-8');
+
+const server = http.createServer((req, res) => {
+    console.log(req.url)
+    console.log('server started')
+    // res.setHeader('Dummy', 'Dummyvalue');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(data);
+
+})
+
+server.listen(8080)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //const lib = require('./lib.js') //commonjs syntax
-import {sum,diff} from './lib.js';
-import express from 'express';
+// import {sum,diff} from './lib.js';
 
-console.log('hello world')
-
-const server = express();
-server.listen(8080);
 // =========================================================================================================================
 // UNDERSTANDING THE BASICS
 
