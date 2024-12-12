@@ -94,9 +94,10 @@ Now here there can be multiple ways of writing this :
   To close the server :
   #### ctrl^c
 
-  Backend's one function is to do static hosting
-  next is to fetch apis
-  
+  ## Functions of Backend(NODE)
+  1. static hosting
+  2. dynamic hosting / server side rendering
+  3. api generation
 
 
 
