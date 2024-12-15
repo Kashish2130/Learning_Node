@@ -1,5 +1,7 @@
 # Learning_Node
 
+## you can also revise from CoderDOST github notes!!
+
 ### How to add changes to your remote repo?
 
 <img src="images/How to add changes to remote repo.png" alt="My Image" width="500" height="300">
