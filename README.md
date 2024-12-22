@@ -250,3 +250,16 @@ server.delete('/products/:id', (req, res) => {
 })
 
 
+## Model-View-Controller
+Models : database or data
+View : means data vsible in frontend
+Controller : communication between models and views
+
+#### Now some folder stucture has been changed and we have added 2 folders in our main folder (REST_APIS)
+<img src="images/New folder(REST_APIS).png" alt="My Image" width="500" height="400">
+
+1. Controller
+<img src="images/Controller.png" alt="My Image" width="500" height="400">
+
+2. Routes
+<img src="images/Routes.png" alt="My Image" width="500" height="400">
