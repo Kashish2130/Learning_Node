@@ -193,11 +193,11 @@ server.use(morgan('default')) ;
 <img src="images/REST.png" alt="My Image" width="500" height="400">
 
 #### Helps in doing crud operations
-// C R U D operations  
-// C - create  
-// R - Read
-// U - update
-// D - delete
+// C R U D operations  <br>
+// C - create  <br>
+// R - Read <br>
+// U - update <br>
+// D - delete <br>
 
 ```javascript
 #### //CREATE
