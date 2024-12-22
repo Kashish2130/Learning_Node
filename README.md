@@ -199,7 +199,7 @@ server.use(morgan('default')) ;
 // U - update
 // D - delete
 
-//CREATE
+#### //CREATE
 //create API - which is alsways made using POST method
 //create POST/products
 server.post('/products', (req, res) => {
@@ -208,7 +208,7 @@ server.post('/products', (req, res) => {
     res.status(201).json(req.body);
 })
 
-//READ
+#### //READ
 //read api - GET/products
 server.get('/products', (req, res) => {
     res.json(products)
@@ -220,7 +220,7 @@ server.get('/products/:id', (req, res) => {
     res.json(product);
 })
 
-//UPDATE 
+#### //UPDATE 
 //update PUT /products/:id
 //put overwrites the exisiting properties
 server.put('/products/:id', (req, res) => {
@@ -240,7 +240,7 @@ server.patch('/products/:id', (req, res) => {
     res.status(200).json();
 }) 
 
-//DELETE
+#### //DELETE
 //DELETE /products/:id 
 server.delete('/products/:id', (req, res) => {
     const id = +req.params.id
