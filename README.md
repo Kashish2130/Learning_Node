@@ -193,12 +193,13 @@ server.use(morgan('default')) ;
 <img src="images/REST.png" alt="My Image" width="500" height="400">
 
 #### Helps in doing crud operations
-// C R U D operations
-// C - create
+// C R U D operations  
+// C - create  
 // R - Read
 // U - update
 // D - delete
 
+```javascript
 #### //CREATE
 //create API - which is alsways made using POST method
 //create POST/products
@@ -248,6 +249,7 @@ server.delete('/products/:id', (req, res) => {
     products.splice(productIndex,1)
     res.status(200).json();
 })
+```
 
 
 ## Model-View-Controller
