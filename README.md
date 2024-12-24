@@ -284,17 +284,21 @@ server.delete('/products/:id', (req, res) => {
 **Function that can be used :** <br>
 *CREATE* <br>
 1. Insert One Document <br>
-db.products.insertOne({...}): Creates the "products" collection (if it doesn't exist) and inserts a single document with a<br> unique _id.<br>
+Creates the "products" collection (if it doesn't exist) and inserts a single document with a unique _id.<br>
+```db.products.insertOne({...})```<br>
 
 2. Insert Multiple Documents <br>
-db.products.insertMany([...]): Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
+Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
+```db.products.insertMany([...])```<br>
 
 *READ* <br>
 3. Find All Documents<br>
-db.products.find(): Lists all documents in the "products" collection.<br>
+Lists all documents in the "products" collection.<br>
+```db.products.find()```<br>
 
 4. Find a Single Document<br>
-db.products.findOne(filter): Returns the first document matching the specified filter criteria.<br>
+Returns the first document matching the specified filter criteria<br>
+```db.products.findOne(filter)```<br>
 
 5. Filter Operators<br>
 $eq: Equals to (default).<br>
@@ -306,24 +310,28 @@ $and (default for multiple criteria) and $or: Logical operators for combining co
 
 6. Cursor Functions<br>
 sort({...}): Sorts results (1 for ascending, -1 for descending).<br>
+```db.products.find().sort({"price":1})```<br>
 limit(n): Returns only the first n documents.<br>
 countDocuments(filter): Counts the total documents matching the filter.<br>
+```db.products.countDocuments()```<br>
 
 7. Projection in Find<br>
-db.collection.find(query, projection): Specifies fields to include/exclude in the result.<br>
+: Specifies fields to include/exclude in the result<br>
+```db.collection.find(query, projection)```<br>
 
 *UPDATE*<br>
 8. updateOne<br>
 Updates the first document matching the filter.<br>
-db.collection.updateOne(filter, update, options)<br>
+```db.collection.updateOne(filter, update, options)```<br>
+```db.products.find({'price':{$gte : 800}},{'title':1,'_id':0})```<br>
 
 9. updateMany<br>
 Updates all documents matching the filter.<br>
-db.products.updateOne({ ‘id’: { $lt: 1 } }, { $set: { ‘price’ : 900 } })<br>
+```db.products.updateOne({ ‘id’: { $lt: 1 } }, { $set: { ‘price’ : 900 } })```<br>
 
 10. replaceOne<br>
 Replaces the entire document matching the filter.<br>
-db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })<br>
+```db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })```<br>
 
 **Operators for Updates:**<br>
 $set: Updates/sets specific fields.<br>
@@ -332,18 +340,18 @@ $inc: Increments numerical fields.<br>
 $mul: Multiplies numerical fields.<br>
 $rename: Renames a field.<br>
 
-11. upsert Option<br>
+11. upsert Option <br>
 If no document matches, a new one is inserted (upsert: true).<br>
 ```db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )```<br>
 
 *DELETE* <br>
 12. deleteOne<br>
 Deletes the first document matching the filter.<br>
-db.collection.deleteOne(filter, options)<br>
+```db.collection.deleteOne(filter, options)```<br>
 
 13. deleteMany<br>
 Deletes all documents matching the filter.<br>
-db.collection.deleteMany(filter, options)<br>
+```db.collection.deleteMany(filter, options)```<br>
 
 
 
