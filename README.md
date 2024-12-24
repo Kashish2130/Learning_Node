@@ -5,7 +5,7 @@
 ### How to add changes to your remote repo?
 
 <img src="images/How to add changes to remote repo.png" alt="My Image" width="500" height="300">
-<!-- ![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png) -->
+<!<br> ![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png) <br>>
 
 A module in Node.js is like a small, self-contained package of code that can be used to perform specific tasks. You can think of it as a building block for your application.
 For example:
@@ -267,7 +267,7 @@ server.delete('/products/:id', (req, res) => {
 <img src="images/Routes.png" alt="My Image" width="500" height="400">
 
 ## MONGO DB (NO SQL DATABASE)
-**SQL VS NO SQL COMPARISON**--
+**SQL VS NO SQL COMPARISON**<br>
 <img src="images/NO SQL 1.png" alt="My Image" width="600" height="400">
 <img src="images/NO SQL 2.png" alt="My Image" width="600" height="400">
 <img src="images/NO SQL 3.png" alt="My Image" width="600" height="400">
@@ -281,69 +281,69 @@ server.delete('/products/:id', (req, res) => {
 3. use nameofanydb
 4. show collection (this will show collections inside of that db)
 
-**Function that can be used :** **
-*CREATE* \
-1. Insert One Document --
-db.products.insertOne({...}): Creates the "products" collection (if it doesn't exist) and inserts a single document with a-- unique _id.--
+**Function that can be used :** <br>
+*CREATE* <br>
+1. Insert One Document <br>
+db.products.insertOne({...}): Creates the "products" collection (if it doesn't exist) and inserts a single document with a<br> unique _id.<br>
 
-2. Insert Multiple Documents --
-db.products.insertMany([...]): Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.--
+2. Insert Multiple Documents <br>
+db.products.insertMany([...]): Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
 
-*READ*--
-3. Find All Documents--
-db.products.find(): Lists all documents in the "products" collection.--
+*READ*<br>
+3. Find All Documents<br>
+db.products.find(): Lists all documents in the "products" collection.<br>
 
-4. Find a Single Document--
-db.products.findOne(filter): Returns the first document matching the specified filter criteria.--
+4. Find a Single Document<br>
+db.products.findOne(filter): Returns the first document matching the specified filter criteria.<br>
 
-5. Filter Operators--
-$eq: Equals to (default).--
-$lt: Less than.--
-$lte: Less than or equal to.--
-$gt: Greater than.--
-$gte: Greater than or equal to.--
-$and (default for multiple criteria) and $or: Logical operators for combining conditions.--
+5. Filter Operators<br>
+$eq: Equals to (default).<br>
+$lt: Less than.<br>
+$lte: Less than or equal to.<br>
+$gt: Greater than.<br>
+$gte: Greater than or equal to.<br>
+$and (default for multiple criteria) and $or: Logical operators for combining conditions.<br>
 
-6. Cursor Functions--
-sort({...}): Sorts results (1 for ascending, -1 for descending).--
-limit(n): Returns only the first n documents.--
-countDocuments(filter): Counts the total documents matching the filter.--
+6. Cursor Functions<br>
+sort({...}): Sorts results (1 for ascending, -1 for descending).<br>
+limit(n): Returns only the first n documents.<br>
+countDocuments(filter): Counts the total documents matching the filter.<br>
 
-7. Projection in Find--
-db.collection.find(query, projection): Specifies fields to include/exclude in the result.--
+7. Projection in Find<br>
+db.collection.find(query, projection): Specifies fields to include/exclude in the result.<br>
 
-*UPDATE*--
-8. updateOne--
-Updates the first document matching the filter.--
-db.collection.updateOne(filter, update, options)--
+*UPDATE*<br>
+8. updateOne<br>
+Updates the first document matching the filter.<br>
+db.collection.updateOne(filter, update, options)<br>
 
-9. updateMany--
-Updates all documents matching the filter.--
-db.products.updateOne({ ‘id’: { $lt: 1 } }, { $set: { ‘price’ : 900 } })--
+9. updateMany<br>
+Updates all documents matching the filter.<br>
+db.products.updateOne({ ‘id’: { $lt: 1 } }, { $set: { ‘price’ : 900 } })<br>
 
-10. replaceOne--
-Replaces the entire document matching the filter.--
-db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })--
+10. replaceOne<br>
+Replaces the entire document matching the filter.<br>
+db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })<br>
 
-**Operators for Updates:**--
-$set: Updates/sets specific fields.--
-$unset: Removes specific fields.--
-$inc: Increments numerical fields.--
-$mul: Multiplies numerical fields.--
-$rename: Renames a field.--
+**Operators for Updates:**<br>
+$set: Updates/sets specific fields.<br>
+$unset: Removes specific fields.<br>
+$inc: Increments numerical fields.<br>
+$mul: Multiplies numerical fields.<br>
+$rename: Renames a field.<br>
 
-11. upsert Option--
-If no document matches, a new one is inserted (upsert: true).--
-db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )--
+11. upsert Option<br>
+If no document matches, a new one is inserted (upsert: true).<br>
+db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )<br>
 
 *DELETE*
-12. deleteOne--
-Deletes the first document matching the filter.--
-db.collection.deleteOne(filter, options)--
+12. deleteOne<br>
+Deletes the first document matching the filter.<br>
+db.collection.deleteOne(filter, options)<br>
 
-13. deleteMany--
-Deletes all documents matching the filter.--
-db.collection.deleteMany(filter, options)--
+13. deleteMany<br>
+Deletes all documents matching the filter.<br>
+db.collection.deleteMany(filter, options)<br>
 
 
 
