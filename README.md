@@ -267,7 +267,7 @@ server.delete('/products/:id', (req, res) => {
 <img src="images/Routes.png" alt="My Image" width="500" height="400">
 
 ## MONGO DB (NO SQL DATABASE)
-**SQL VS NO SQL COMPARISON**
+**SQL VS NO SQL COMPARISON**--
 <img src="images/NO SQL 1.png" alt="My Image" width="600" height="400">
 <img src="images/NO SQL 2.png" alt="My Image" width="600" height="400">
 <img src="images/NO SQL 3.png" alt="My Image" width="600" height="400">
