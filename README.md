@@ -282,7 +282,7 @@ server.delete('/products/:id', (req, res) => {
 4. show collection (this will show collections inside of that db)
 
 **Function that can be used :** **
-*CREATE* **
+*CREATE* \
 1. Insert One Document --
 db.products.insertOne({...}): Creates the "products" collection (if it doesn't exist) and inserts a single document with a-- unique _id.--
 
