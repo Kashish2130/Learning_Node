@@ -274,5 +274,77 @@ server.delete('/products/:id', (req, res) => {
 <img src="images/NO SQL 4.png" alt="My Image" width="600" height="400">
 <img src="images/SQL Structure.png" alt="My Image" width="600" height="400">
 
+### MONGO SHELL
+1. type mongosh
+2. show dbs (list of db will be given)
+3. use nameofanydb
+4. show collection (this will show collections inside of that db)
+
+**Function that can be used :**
+*CREATE*
+1. Insert One Document
+db.products.insertOne({...}): Creates the "products" collection (if it doesn't exist) and inserts a single document with a-- unique _id.
+
+2. Insert Multiple Documents
+db.products.insertMany([...]): Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.--
+Read Operations
+
+*READ*
+3. Find All Documents
+db.products.find(): Lists all documents in the "products" collection.--
+
+4. Find a Single Document
+db.products.findOne(filter): Returns the first document matching the specified filter criteria.--
+
+5. Filter Operators
+$eq: Equals to (default).--
+$lt: Less than.--
+$lte: Less than or equal to.--
+$gt: Greater than.--
+$gte: Greater than or equal to.--
+$and (default for multiple criteria) and $or: Logical operators for combining conditions.--
+
+6. Cursor Functions
+sort({...}): Sorts results (1 for ascending, -1 for descending).--
+limit(n): Returns only the first n documents.--
+countDocuments(filter): Counts the total documents matching the filter.--
+
+7. Projection in Find
+db.collection.find(query, projection): Specifies fields to include/exclude in the result.--
+
+*UPDATE*
+8. updateOne
+Updates the first document matching the filter.--
+db.collection.updateOne(filter, update, options)--
+
+9. updateMany
+Updates all documents matching the filter.--
+db.products.updateOne({ ‘id’: { $lt: 1 } }, { $set: { ‘price’ : 900 } })--
+
+10. replaceOne
+Replaces the entire document matching the filter.--
+db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })--
+
+**Operators for Updates:**--
+$set: Updates/sets specific fields.--
+$unset: Removes specific fields.--
+$inc: Increments numerical fields.--
+$mul: Multiplies numerical fields.--
+$rename: Renames a field.--
+
+11. upsert Option
+If no document matches, a new one is inserted (upsert: true).--
+db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )--
+
+*DELETE*
+12. deleteOne
+Deletes the first document matching the filter.--
+db.collection.deleteOne(filter, options)--
+
+13. deleteMany
+Deletes all documents matching the filter.--
+db.collection.deleteMany(filter, options)--
+
+
 
 
