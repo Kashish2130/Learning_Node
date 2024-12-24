@@ -289,7 +289,7 @@ db.products.insertOne({...}): Creates the "products" collection (if it doesn't e
 2. Insert Multiple Documents <br>
 db.products.insertMany([...]): Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
 
-*READ*<br>
+*READ* <br>
 3. Find All Documents<br>
 db.products.find(): Lists all documents in the "products" collection.<br>
 
@@ -334,9 +334,9 @@ $rename: Renames a field.<br>
 
 11. upsert Option<br>
 If no document matches, a new one is inserted (upsert: true).<br>
-db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )<br>
+```db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )```<br>
 
-*DELETE*
+*DELETE* <br>
 12. deleteOne<br>
 Deletes the first document matching the filter.<br>
 db.collection.deleteOne(filter, options)<br>
