@@ -290,7 +290,7 @@ Creates the "products" collection (if it doesn't exist) and inserts a single doc
 Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
 ```db.products.insertMany([...])```<br>
 
-<!-- *READ* <br> -->
+*READ* <br>
 3. Find All Documents<br>
 Lists all documents in the "products" collection.<br>
 ```db.products.find()```<br>
@@ -318,7 +318,7 @@ countDocuments(filter): Counts the total documents matching the filter.<br>
 : Specifies fields to include/exclude in the result<br>
 ```db.collection.find(query, projection)```<br>
 
-<!-- *UPDATE*<br> -->
+*UPDATE*<br>
 8. updateOne<br>
 Updates the first document matching the filter.<br>
 ```db.collection.updateOne(filter, update, options)```<br>
@@ -343,7 +343,7 @@ $rename: Renames a field.<br> -->
 If no document matches, a new one is inserted (upsert: true).<br>
 ```db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )```<br>
 
-<!-- *DELETE* <br> -->
+*DELETE* <br>
 12. deleteOne<br>
 Deletes the first document matching the filter.<br>
 ```db.collection.deleteOne(filter, options)```<br>
