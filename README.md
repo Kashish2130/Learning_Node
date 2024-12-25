@@ -1,11 +1,10 @@
 # Learning_Node
 
-## you can also revise from CoderDOST github notes!!
+[Link to Coder Dost Github Notes](https://github.com/coderdost/full-stack-dev-2023)
 
-### How to add changes to your remote repo?
+[Link to Jaymin's Web Dev Doc](https://docs.google.com/document/d/19RgZH-rZo4eyp3i7zxdl2LDyGTVcEcRl1Ji8EhunlYM/edit?tab=t.lqzioqs2yywq)
 
-<img src="images/How to add changes to remote repo.png" alt="My Image" width="500" height="300">
-<!<br> ![Steps to Add changes to your remote repo](images\How to add changes to remote repo.png) <br>>
+## NODE JS
 
 A module in Node.js is like a small, self-contained package of code that can be used to perform specific tasks. You can think of it as a building block for your application.
 For example:
@@ -254,8 +253,8 @@ server.delete('/products/:id', (req, res) => {
 
 ## Model-View-Controller
 1. Models : database or data.
-2. View : means data vsible in frontend.
-3. Controller : communication between models and views.
+2. View : means data vIsible in frontend.
+3. Controller : communication between models and views. (Where all APIS are there.)
 
 #### Now some folder stucture has been changed and we have added 2 folders in our main folder (REST_APIS)
 <img src="images/New folder(REST_APIS).png" alt="My Image" width="200" height="400">
@@ -291,7 +290,7 @@ Creates the "products" collection (if it doesn't exist) and inserts a single doc
 Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
 ```db.products.insertMany([...])```<br>
 
-*READ* <br>
+<!-- *READ* <br> -->
 3. Find All Documents<br>
 Lists all documents in the "products" collection.<br>
 ```db.products.find()```<br>
@@ -319,7 +318,7 @@ countDocuments(filter): Counts the total documents matching the filter.<br>
 : Specifies fields to include/exclude in the result<br>
 ```db.collection.find(query, projection)```<br>
 
-*UPDATE*<br>
+<!-- *UPDATE*<br> -->
 8. updateOne<br>
 Updates the first document matching the filter.<br>
 ```db.collection.updateOne(filter, update, options)```<br>
@@ -333,18 +332,18 @@ Updates all documents matching the filter.<br>
 Replaces the entire document matching the filter.<br>
 ```db.products.replaceOne( { title: "Blue Shirt" }, { id: 3, title: "Green Trousers", thumbnail: "https://via.placeholder.com/ 250", price: 1000, rating: 4.2 })```<br>
 
-**Operators for Updates:**<br>
+<!-- **Operators for Updates:**<br>
 $set: Updates/sets specific fields.<br>
 $unset: Removes specific fields.<br>
 $inc: Increments numerical fields.<br>
 $mul: Multiplies numerical fields.<br>
-$rename: Renames a field.<br>
+$rename: Renames a field.<br> -->
 
 11. upsert Option <br>
 If no document matches, a new one is inserted (upsert: true).<br>
 ```db.products.updateOne( { title: "Green Jacket" }, {  $set: { price: 1500, rating: 4.3, thumbnail: "https://via.placeholder.com/250" } } , { upsert: true } )```<br>
 
-*DELETE* <br>
+<!-- *DELETE* <br> -->
 12. deleteOne<br>
 Deletes the first document matching the filter.<br>
 ```db.collection.deleteOne(filter, options)```<br>
@@ -352,6 +351,20 @@ Deletes the first document matching the filter.<br>
 13. deleteMany<br>
 Deletes all documents matching the filter.<br>
 ```db.collection.deleteMany(filter, options)```<br>
+
+### Mongo DB structure <br>
+<img src="images/mongo db structure.png" alt="My Image" width="500" height="300"> <br>
+
+-> **Mongo DB Atlas can be manipulated using Mongo DB shell or Mongo DB Compass(which is saved on local system)** <br>
+
+If we use Mongo db shell then first we need to run the connection string in cmd and enter password to build the connection. <br>
+
+If we use Mnongo db Compass then :
+1. open compass
+2. add new connection
+3. enter connection string in url
+4. save and connect
+5. and then we can see the interface and do the required fucntioning.
 
 
 
