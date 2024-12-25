@@ -359,12 +359,28 @@ Deletes all documents matching the filter.<br>
 
 If we use Mongo db shell then first we need to run the connection string in cmd and enter password to build the connection. <br>
 
-If we use Mnongo db Compass then :
+If we use Mnongo db Compass then :<br>
 1. open compass
 2. add new connection
 3. enter connection string in url
 4. save and connect
 5. and then we can see the interface and do the required fucntioning.
+
+*ENVIORNMENT VARIABLES*<br>
+How to store db user’s password in your system ?<br>
+**Type this is terminal :**<br>
+→ node
+→ process.env (to check environment Variables)
+→ To add password temporarily:- process.env.DB_PASS = 'Kashish_2130'
+→ To see that it is stored again run "process.env"
+→ But to add permanently :
+ → type npm install dotenv(it is a library)
+ → make .env file ( . is used to indicate that the file is hidden)
+ → now write the below line in the top of index.js file:
+    → require('dotenv').config()
+ → now store pass in .env file 
+→ Also add .env in .gitignore so that it doesn't get uploaded on git
+
 
 
 
