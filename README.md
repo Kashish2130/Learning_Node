@@ -290,28 +290,29 @@ Creates the "products" collection (if it doesn't exist) and inserts multiple doc
 ```db.products.insertMany([...])```<br>
 
 *READ* <br>
-3. Find All Documents<br>
-Lists all documents in the "products" collection.<br>
-```db.products.find()```<br>
-4. Find a Single Document<br>
-Returns the first document matching the specified filter criteria<br>
-```db.products.findOne(filter)```<br>
-5. Filter Operators<br>
-$eq: Equals to (default).<br>
-$lt: Less than.<br>
-$lte: Less than or equal to.<br>
-$gt: Greater than.<br>
-$gte: Greater than or equal to.<br>
-$and (default for multiple criteria) and $or: Logical operators for combining conditions.<br>
-6. Cursor Functions<br>
-sort({...}): Sorts results (1 for ascending, -1 for descending).<br>
-```db.products.find().sort({"price":1})```<br>
-limit(n): Returns only the first n documents.<br>
-countDocuments(filter): Counts the total documents matching the filter.<br>
-```db.products.countDocuments()```<br>
-7. Projection in Find<br>
-: Specifies fields to include/exclude in the result<br>
-```db.collection.find(query, projection)```<br>
+
+    3. Find All Documents<br>
+    Lists all documents in the "products" collection.<br>
+    ```db.products.find()```<br>
+    4. Find a Single Document<br>
+    Returns the first document matching the specified filter criteria<br>
+    ```db.products.findOne(filter)```<br>
+    5. Filter Operators<br>
+    $eq: Equals to (default).<br>
+    $lt: Less than.<br>
+    $lte: Less than or equal to.<br>
+    $gt: Greater than.<br>
+    $gte: Greater than or equal to.<br>
+    $and (default for multiple criteria) and $or: Logical operators for combining conditions.<br>
+    6. Cursor Functions<br>
+    sort({...}): Sorts results (1 for ascending, -1 for descending).<br>
+    ```db.products.find().sort({"price":1})```<br>
+    limit(n): Returns only the first n documents.<br>
+    countDocuments(filter): Counts the total documents matching the filter.<br>
+    ```db.products.countDocuments()```<br>
+    7. Projection in Find<br>
+    : Specifies fields to include/exclude in the result<br>
+    ```db.collection.find(query, projection)```<br>
 
 *UPDATE*<br>
 8. updateOne<br>
