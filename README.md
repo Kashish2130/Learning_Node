@@ -369,17 +369,17 @@ If we use Mnongo db Compass then :<br>
 *ENVIORNMENT VARIABLES*<br>
 How to store db user’s password in your system ?<br>
 **Type this is terminal :**<br>
-→ node
-→ process.env (to check environment Variables)
-→ To add password temporarily:- process.env.DB_PASS = 'Kashish_2130'
-→ To see that it is stored again run "process.env"
-→ But to add permanently :
- → type npm install dotenv(it is a library)
- → make .env file ( . is used to indicate that the file is hidden)
- → now write the below line in the top of index.js file:
-    → require('dotenv').config()
- → now store pass in .env file 
-→ Also add .env in .gitignore so that it doesn't get uploaded on git
+→ node<br>
+→ process.env (to check environment Variables)<br>
+→ To add password temporarily:- process.env.DB_PASS = 'Kashish_2130'<br>
+→ To see that it is stored again run "process.env"<br>
+→ But to add permanently :<br>
+ → type npm install dotenv(it is a library)<br>
+ → make .env file ( . is used to indicate that the file is hidden)<br>
+ → now write the below line in the top of index.js file:<br>
+    → require('dotenv').config()<br>
+ → now store pass in .env file <br>
+→ Also add .env in .gitignore so that it doesn't get uploaded on git<br>
 
 
 
