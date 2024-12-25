@@ -290,7 +290,7 @@ Creates the "products" collection (if it doesn't exist) and inserts a single doc
 Creates the "products" collection (if it doesn't exist) and inserts multiple documents at once.<br>
 ```db.products.insertMany([...])```<br>
 
-*READ* <br>
+*READ* <br><br>
 3. Find All Documents<br>
 Lists all documents in the "products" collection.<br>
 ```db.products.find()```<br>
