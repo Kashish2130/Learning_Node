@@ -3,9 +3,8 @@ require('dotenv').config()
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const productRouter = require('./routes/product')
+const productRouter = require('./routes/product-routes')
 const userRouter = require('./routes/user')
-// const { Schema } = mongoose;
 
 const server = express();
 
@@ -20,15 +19,6 @@ async function main() {
     // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
-// const productSchema = new Schema({
-//     title: String,
-//     description: String,
-//     category: String,
-//     price: Number,
-//     discountPercentage: Number,
-//     rating: Number,
-//     stock: Number,
-// });
 
 //middlewares
 server.use(express.json());
