@@ -367,6 +367,7 @@ If we use Mnongo db Compass then :<br>
 5. and then we can see the interface and do the required fucntioning.
 
 *ENVIORNMENT VARIABLES*<br>
+
 How to store db user’s password in your system ?<br>
 **Type this is terminal :**<br>
 → node<br>
@@ -380,6 +381,49 @@ How to store db user’s password in your system ?<br>
     → require('dotenv').config()<br>
  → now store pass in .env file <br>
 → Also add .env in .gitignore so that it doesn't get uploaded on git<br>
+
+## MOONGOSE
+
+#### What is mongoose ? <br>
+→ **Mongoose** is a popular Node.js library used to work with MongoDB, a NoSQL database. It provides a way to interact with the database using JavaScript objects. With Mongoose, you define the structure of your data using schemas and work with that data as if it were JavaScript objects. This makes it easier to handle database operations like creating, reading, updating, or deleting records.<br>
+In simple terms, Mongoose acts as a bridge between your application and the database. It allows you to manage the database by managing JavaScript objects. Instead of directly writing database queries, you modify objects, and Mongoose takes care of syncing these changes with the database. This makes database management more intuitive and organized, especially in larger applications.<br>
+With Mongoose, you work with JavaScript objects (models) instead of raw JSON documents, making your code more readable and maintainable.<br>
+```npm install mongoose``` in cmd
+```const mongoose = require('mongoose');```
+
+So first understand what is schema? <br>
+→ **Schema** is kind of a **configuration**(it decides what fields will be there and what will be their types) for a particular **collection**(table).<br>
+
+**So to break it down** <br>
+First you need to establish connection with the database and for that you have to write the following code:
+```main().catch(err => console.log(err));
+async function main() {
+    await mongoose.connect("mongodb://**127.0.0.1:27017**/ecommerce");  
+    //here the bold part is the the address of local host itself
+    //call also write this connection string as "mongodb://localhost:27017/ecommerce"
+    console.log('database connected');
+    // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}```
+
+1. First, you create a schema. Think of it as a template or a plan that describes what fields your data should have and their types.<br>
+```const { Schema } = mongoose;
+const userSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    email: String,
+});```
+
+2. A model is created using this schema. The model is what actually allows you to read, write, update, and delete data in the MongoDB database. It represents a specific collection in the database.<br>
+```const User = mongoose.model('User', userSchema);```
+
+3. You can use the model to perform operations such as : <br>
+**CRUD Operations** <br>
+
+
+
+
+
+
 
 
 
