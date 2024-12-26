@@ -4,7 +4,7 @@ const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
 const products = data.products;
 
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const server = express(); //server starts here
 
 
@@ -15,7 +15,7 @@ server.use(express.json()); //this is also a middleware which reads the body as 
 
 // server.use(express.urlencoded());//this is required when you are sending data through forms
 
-server.use(morgan('default')) 
+// server.use(morgan('default')) 
 //this is also called as logger which gives details about the server 
 // //this is a downloaded middleware
 
