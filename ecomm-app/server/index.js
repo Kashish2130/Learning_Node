@@ -2,14 +2,15 @@ require('dotenv').config()
 
 const cors = require('cors')
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const mongoose = require('mongoose');
 const productRouter = require('./routes/product-routes')
 const userRouter = require('./routes/user')
-
+const path = require('path');
 const server = express();
 
 console.log('env', process.env.DB_PASSWORD)
+
 
 //db connection
 main().catch(err => console.log(err));
@@ -24,11 +25,14 @@ async function main() {
 //middlewares
 server.use(cors());
 server.use(express.json());
-server.use(morgan('default'))
-server.use(express.static('public'));
+// server.use(morgan('default'))
+server.use(express.static(path.resolve(__dirname,process.env.PUBLIC_DIR)));
 server.use('/products', productRouter.router);
 server.use('/users', userRouter.router);
+server.use("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,process.env.PUBLIC_DIR,"index.html"));
+}); 
 
-server.listen(8080, () => { //server ends here
+server.listen(process.env.PORT, () => { //server ends here
     console.log("server started")
 });

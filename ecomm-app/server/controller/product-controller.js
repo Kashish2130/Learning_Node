@@ -139,3 +139,7 @@ exports.deleteProduct = async (req, res) => {
 // };
 
 // export { createProduct, getAllProducts, getProduct, replaceProduct, updateProduct, deleteProduct };
+
+
+
+
