@@ -1,7 +1,7 @@
-const fs = require("fs");
+// const fs = require("fs");
 // const index = fs.readFileSync('index.html', 'utf-8');
-const dataParent = JSON.parse(fs.readFileSync("data.json", "utf-8"));
-const data = dataParent.data;
+// const dataParent = JSON.parse(fs.readFileSync("data.json", "utf-8"));
+// const data = dataParent.data;
 const Product = require("../models/product-model");
 
 // exports.createProduct = ((req, res) => {
