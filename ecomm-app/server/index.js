@@ -43,7 +43,6 @@ const auth = (req, res, next) => {
     }
     console.log(decoded);
 };
-
 server.use(cors());
 server.use(express.json());
 // server.use(morgan('default'))
